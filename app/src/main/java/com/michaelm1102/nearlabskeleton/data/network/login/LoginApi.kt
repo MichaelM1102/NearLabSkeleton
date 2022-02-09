@@ -6,6 +6,7 @@ import retrofit2.http.POST
 
 interface LoginApi {
     @POST("login")
+    //Todo replace with real response class
     suspend fun handleLogin(): DtoBaseResponse<Any>
 
 }
