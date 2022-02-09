@@ -1,4 +1,4 @@
-package com.michaelm1102.nearlabskeleton.ui.base
+package com.michaelm1102.nearlabskeleton.common.base
 
 import android.app.Activity
 import android.os.Bundle

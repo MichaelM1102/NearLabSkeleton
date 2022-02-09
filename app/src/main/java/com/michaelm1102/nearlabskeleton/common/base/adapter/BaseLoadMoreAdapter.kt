@@ -1,4 +1,4 @@
-package com.michaelm1102.nearlabskeleton.ui.base.adapter
+package com.michaelm1102.nearlabskeleton.common.base.adapter
 
 import android.util.Log
 import android.view.LayoutInflater

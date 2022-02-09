@@ -1,4 +1,4 @@
-package com.michaelm1102.nearlabskeleton.ui.extension
+package com.michaelm1102.nearlabskeleton.common.extension
 
 import android.content.Context
 import android.view.LayoutInflater

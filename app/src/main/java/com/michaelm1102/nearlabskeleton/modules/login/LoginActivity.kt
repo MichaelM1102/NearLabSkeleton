@@ -1,4 +1,4 @@
-package com.michaelm1102.nearlabskeleton.ui.login
+package com.michaelm1102.nearlabskeleton.modules.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

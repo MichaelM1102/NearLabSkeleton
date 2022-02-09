@@ -1,4 +1,4 @@
-package com.michaelm1102.nearlabskeleton.ui.extension
+package com.michaelm1102.nearlabskeleton.common.extension
 
 import android.app.Application
 import android.content.Context

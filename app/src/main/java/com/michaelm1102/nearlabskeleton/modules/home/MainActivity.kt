@@ -1,4 +1,4 @@
-package com.michaelm1102.nearlabskeleton.ui.home
+package com.michaelm1102.nearlabskeleton.modules.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

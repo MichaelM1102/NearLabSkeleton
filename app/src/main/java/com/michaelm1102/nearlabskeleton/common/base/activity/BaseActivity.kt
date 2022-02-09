@@ -1,4 +1,4 @@
-package com.michaelm1102.nearlabskeleton.ui.base.activity
+package com.michaelm1102.nearlabskeleton.common.base.activity
 
 import android.app.AlertDialog
 import androidx.annotation.LayoutRes
