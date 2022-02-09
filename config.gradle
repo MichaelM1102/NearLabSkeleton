@@ -44,6 +44,10 @@ rootProject.ext.test_core_ktx = '1.4.0'
 
 //navigation
 rootProject.ext.navigation = '2.4.1'
+
+//room
+rootProject.ext.room_version = "2.4.0"
+
 rootProject.ext.deps = [
 
         // AndroidX
@@ -51,7 +55,7 @@ rootProject.ext.deps = [
         appcompat          : "androidx.appcompat:appcompat:$appcompat",
         material           : "com.google.android.material:material:$material",
         preference         : "androidx.preference:preference:$preference",
-        constraint_layout    : "androidx.constraintlayout:constraintlayout:$constrain_layout",
+        constraint_layout  : "androidx.constraintlayout:constraintlayout:$constrain_layout",
 
         // Lifecycle
         lifecycle_viewmodel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_viewmodel",
@@ -69,8 +73,8 @@ rootProject.ext.deps = [
 
 
         // Retrofit
-        ok_http_logging      : "com.squareup.okhttp3:logging-interceptor:$ok_http_logging",
-        retrofit_gson       : "com.squareup.retrofit2:converter-gson:$retrofit",
+        ok_http_logging    : "com.squareup.okhttp3:logging-interceptor:$ok_http_logging",
+        retrofit_gson      : "com.squareup.retrofit2:converter-gson:$retrofit",
         retrofit           : "com.squareup.retrofit2:retrofit:$retrofit",
         gson               : "com.google.code.gson:gson:$gson",
 
@@ -86,7 +90,12 @@ rootProject.ext.deps = [
         junit_ext          : "androidx.test.ext:junit:$junit_ext",
 
         // Navigation
-        nav_fragment            : "androidx.navigation:navigation-fragment-ktx:$navigation",
-        nav_ui                  : "androidx.navigation:navigation-ui-ktx:$navigation",
-        nav_dynamic_feature      : "androidx.navigation:navigation-dynamic-features-fragment:$navigation",
+        nav_fragment       : "androidx.navigation:navigation-fragment-ktx:$navigation",
+        nav_ui             : "androidx.navigation:navigation-ui-ktx:$navigation",
+        nav_dynamic_feature: "androidx.navigation:navigation-dynamic-features-fragment:$navigation",
+
+        //Room
+        room_runtime       : "androidx.room:room-runtime:$room_version",
+        room               : "androidx.room:room-ktx:$room_version",
+        room_compiler      : "androidx.room:room-compiler:$room_version",
 ]

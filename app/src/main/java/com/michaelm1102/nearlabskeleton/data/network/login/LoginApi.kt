@@ -1,7 +1,6 @@
 package com.michaelm1102.nearlabskeleton.data.network.login
 
-import com.michaelm1102.nearlabskeleton.data.network.base.model.DtoBaseResponse
-import retrofit2.Response
+import com.michaelm1102.nearlabskeleton.common.api.models.DtoBaseResponse
 import retrofit2.http.POST
 
 interface LoginApi {

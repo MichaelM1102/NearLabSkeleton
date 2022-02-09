@@ -1,4 +1,4 @@
-package com.michaelm1102.nearlabskeleton.data.network.base
+package com.michaelm1102.nearlabskeleton.common.api
 
 import dagger.Module
 import dagger.Provides

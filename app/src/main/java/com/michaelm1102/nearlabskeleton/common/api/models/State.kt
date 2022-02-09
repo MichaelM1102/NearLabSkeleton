@@ -1,4 +1,4 @@
-package com.michaelm1102.nearlabskeleton.data.network.base.model
+package com.michaelm1102.nearlabskeleton.common.api.models
 
 sealed class State<out T> {
 
