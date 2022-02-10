@@ -1,21 +1,19 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
 }
 
 android {
-    compileSdk compile_sdk
+    compileSdk 32
 
     defaultConfig {
-        applicationId "com.michaelm1102.nearlabskeleton"
         minSdk min_sdk
         targetSdk target_sdk
-        versionCode version_code
-        versionName version_name
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -24,9 +22,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     buildFeatures{
-        viewBinding true 
+        viewBinding true
     }
     compileOptions {
         sourceCompatibility java_source_version
@@ -38,7 +35,6 @@ android {
 }
 
 dependencies {
-
 
     implementation rootProject.deps.core_ktx
     implementation rootProject.deps.appcompat
@@ -52,6 +48,8 @@ dependencies {
     implementation rootProject.deps.lifecycle_runtime
     implementation rootProject.deps.lifecycle_common
 
+
+
     //coroutines
     implementation rootProject.deps.coroutine
     implementation rootProject.deps.coroutine_core
@@ -59,10 +57,17 @@ dependencies {
     //api
     implementation rootProject.deps.retrofit
     implementation rootProject.deps.retrofit_gson
-    implementation rootProject.deps.ok_http_logging
     implementation rootProject.deps.gson
-    implementation project(path: ':common')
 
+
+    // Hilt
+    implementation rootProject.deps.hilt
+    kapt rootProject.deps.hilt_compiler
+
+    //navigation
+    implementation rootProject.deps.nav_fragment
+    implementation rootProject.deps.nav_ui
+    implementation rootProject.deps.nav_dynamic_feature
 
     //testing
     testImplementation rootProject.deps.junit4
@@ -70,18 +75,4 @@ dependencies {
     androidTestImplementation rootProject.deps.test_core
     androidTestImplementation rootProject.deps.espresso_core
     androidTestImplementation rootProject.deps.mockito_core
-
-    //navigation
-    implementation rootProject.deps.nav_fragment
-    implementation rootProject.deps.nav_ui
-    implementation rootProject.deps.nav_dynamic_feature
-
-
-    //logging
-    implementation rootProject.deps.timber_log
-
-    // Hilt
-    implementation rootProject.deps.hilt
-    kapt rootProject.deps.hilt_compiler
-
 }

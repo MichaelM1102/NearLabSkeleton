@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "NearLabSkeleton"
 include ':app'
+include ':common'
+include ':login'

@@ -1,21 +1,19 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
 }
 
 android {
-    compileSdk compile_sdk
+    compileSdk 32
 
     defaultConfig {
-        applicationId "com.michaelm1102.nearlabskeleton"
         minSdk min_sdk
         targetSdk target_sdk
-        versionCode version_code
-        versionName version_name
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -24,9 +22,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     buildFeatures{
-        viewBinding true 
+        viewBinding true
     }
     compileOptions {
         sourceCompatibility java_source_version
@@ -38,8 +35,6 @@ android {
 }
 
 dependencies {
-
-
     implementation rootProject.deps.core_ktx
     implementation rootProject.deps.appcompat
     implementation rootProject.deps.material
@@ -83,5 +78,4 @@ dependencies {
     // Hilt
     implementation rootProject.deps.hilt
     kapt rootProject.deps.hilt_compiler
-
 }

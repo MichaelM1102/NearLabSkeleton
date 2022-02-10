@@ -1,0 +1,36 @@
+package com.michaelm1102.common.ui.base
+
+import android.app.Activity
+import android.os.Bundle
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
+import androidx.annotation.LayoutRes
+import androidx.fragment.app.Fragment
+import androidx.transition.TransitionInflater
+import com.michaelm1102.common.R
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+abstract class BaseFragment(@LayoutRes layoutId: Int) : Fragment(layoutId) {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val inflater = TransitionInflater.from(requireContext())
+        enterTransition = inflater.inflateTransition(R.transition.slide)
+        exitTransition = inflater.inflateTransition(R.transition.fade)
+    }
+
+    protected fun showToast(message: String) =
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+
+    protected fun hideKeyboard(view: View) {
+        val imm: InputMethodManager =
+            requireActivity().getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
+    }
+
+    protected open fun isSafe(): Boolean {
+        return !(this.isRemoving || this.activity == null || this.isDetached || !this.isAdded || this.view == null)
+    }
+}
