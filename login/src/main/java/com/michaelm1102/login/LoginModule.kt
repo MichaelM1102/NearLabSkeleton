@@ -12,7 +12,6 @@ import retrofit2.Retrofit
 @InstallIn(ViewModelComponent::class)
 object LoginModule {
     @Provides
-    @ViewModelScoped
     fun provideLoginApi(retrofit: Retrofit): LoginApi {
         return retrofit.create(LoginApi::class.java)
     }
@@ -20,7 +19,6 @@ object LoginModule {
     // if dao exist provide login dao
     // and embed in repository
     @Provides
-    @ViewModelScoped
     fun provideLoginRepository(loginApi: LoginApi): LoginRepository {
         return LoginRepository(loginApi)
     }
